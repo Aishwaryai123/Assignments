@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <p>Count numbers: <output id="result"></output></p>
+    <button onclick="startWorker()">Start Worker</button>
+    <button onclick="stopWorker()">Stop Worker</button>
+
+
+    <script>
+        var w;
+
+        function startWorker() {
+            if (typeof(Worker) !== "undefined") {
+                if (typeof(w) == "undefined") {
+                    w = new Worker("../js/assign4.js");
+                }
+                w.onmessage = function(event) {
+                    document.getElementById("result").innerHTML = event.data;
+                };
+            } else {
+                document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Workers...";
+            }
+        }
+
+        function stopWorker() {
+            w.terminate();
+            w = undefined;
+        }
+    </script>
+
+</body>
+
+</html>
+<!-- A web worker is a JavaScript that runs in the background, independently of other scripts, without affecting the performance of the page. 
+Worker thread can perform tasks without interfering with the user interface.
+A worker is an object created using a constructor (e.g. Worker()) that runs a named JavaScript file —
+ this file contains the code that will run in the worker thread; workers run in another global context that is different from the current window.
+ 
+You can run whatever code you like inside the worker thread, with some exceptions.
+ For example, you can't directly manipulate the DOM from inside a worker, or use some default methods and properties of the window object
+ . But you can use a large number of items available under window, including WebSockets, and data storage mechanisms like IndexedDB.
+ -->

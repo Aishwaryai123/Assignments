@@ -1,0 +1,7 @@
+@mixin input_type($border-width,$border-type,$border-color,$bg-color,$clr){
+    border-width: $border-width;
+    border-style: $border-type;
+    border-color: $border-color;
+    background-color: $bg-color;
+    color: $clr;
+}

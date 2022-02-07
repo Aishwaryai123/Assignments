@@ -1,0 +1,53 @@
+.btn-myPrimary {
+  border-radius: 3px;
+  padding: 12px 15px 12px 15px;
+  background-color: #8bc34a;
+  border: 1px solid #8bc34a;
+  min-width: 110px;
+  font-family: "SegoeUI SemiBold";
+  font-size: 16px;
+  color: #FFFFFF;
+}
+
+.btn-myPrimary:hover {
+  background-color: #9dce5d;
+  color: #FFFFFF;
+  border: 1px solid #9dce5d;
+}
+
+.btn-myPrimaryDisable {
+  background-color: #eeeeee;
+  color: #999999;
+  border: 1px solid #eeeeee;
+  padding: 12px 15px 12px 15px;
+  min-width: 110px;
+  font-family: "SegoeUI SemiBold";
+  font-size: 16px;
+}
+
+.btn-mySecondary {
+  padding: 12px 15px 12px 15px;
+  min-width: 110px;
+  font-family: "SegoeUI SemiBold";
+  font-size: 16px;
+  background-color: #FFFFFF;
+  color: #2095f2;
+  border: 1px solid #2095f2;
+}
+
+.btn-mySecondary:hover {
+  background-color: #2095f2;
+  color: #FFFFFF;
+  border: 1px solid #2095f2;
+}
+
+.btn-mySecondaryDisable {
+  background-color: #ffffff;
+  color: #999999;
+  border: 1px solid #cccccc;
+  padding: 12px 15px 12px 15px;
+  min-width: 110px;
+  font-family: "SegoeUI SemiBold";
+  font-size: 16px;
+}
+/*# sourceMappingURL=application.css.map */

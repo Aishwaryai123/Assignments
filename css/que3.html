@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../CSS/assign-03.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <form id="myForm">
+        <table>
+            <tr>
+                <td>Employee ID: </td>
+                <td><input type="number" id="employee_id" name="employee_id" min="10001" max="15000" autofocus/></td>
+            </tr>
+            <tr>
+                <td>First Name: </td>
+                <td><input type="text" id="first_name" name="first_name" placeholder="first name" minlength="3" maxlength="15"/></td>
+            </tr>
+            <tr>
+                <td>Last Name: </td>
+                <td><input type="text" id="last_name" placeholder="last name"  minlength="5" maxlength="25"/></td>
+            </tr>
+            <tr>
+                <td>Department: </td>
+                <td>
+                    <input type="radio" name="department_option" value="IT"/><label for="IT">IT</label><br>
+                    <input type="radio" name="department_option" value="HR"/><label for="HR">HR</label><br>
+                    <input type="radio" name="department_option" value="Finance"/><label for="Finance">Finance</label><br>
+                    <input type="radio" name="department_option" value="Admin"/><label for="Admin">Admin</label>
+                </td>
+            </tr>
+            <tr>
+                <td>Date of Joining: </td>
+                <td><input type="date" id="checkdate" ></td>
+            </tr>
+            <tr>
+                <td>Email: </td>
+                <td><input type="email" id="email"></td>
+            </tr>
+            <tr>
+                <td>Contact No.: </td>
+                <td><input type="tel" id="telephone" pattern="^((\+91)?|91)?[789][0-9]{9}" ></td>
+            </tr>
+            <tr>
+                <td>Address: </td>
+                <td><textarea id="address" rows="5" cols="20"></textarea></td>
+            </tr>
+            <tr>
+                <td>Training Programs to be attended: </td>
+                <td>
+                    <input type="checkbox" id="option1" name="checkoption" value="web_basic">
+                    <label for="web_basic">Web Basics</label><br>
+                    <input type="checkbox" id="c#" name="checkoption" value="c#">
+                    <label for="c#">C#</label><br>
+                    <input type="checkbox" id="entity_framework" name="checkoption" value="entity_framework">
+                    <label for="entity_framework">Entity Framework</label><br>
+                    <input type="checkbox" id="asp" name="checkoption" value="asp">
+                    <label for="asp">ASP.NET MVC</label>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button type="submit" onclick="validateForm()">Register</button>
+                    <button type="submit" onclick="cancel()">Cancel</button>
+                </td>
+            </tr>
+        </table>
+        
+        <script src="../js/script.js">
+
+        </script>
+    </body>
+    </form>
+    
+</html>

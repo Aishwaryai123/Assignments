@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Embedding script tag in HTML Document</title>
+    <script>
+        var headparam = 10;
+        document.write(headparam);
+    </script>
+
+</head>
+
+
+<body>
+    <p id="p1"></p>
+    <script>
+        var bodyparam = 20;
+        document.write(bodyparam);
+    </script>
+
+    <script>
+        addNumbers(headparam, bodyparam);
+
+    </script>
+    <script src="../JS/assignment1.4.js"></script>
+
+</body>
+
+</html>

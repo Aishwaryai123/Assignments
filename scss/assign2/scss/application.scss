@@ -1,0 +1,83 @@
+$p1-Border-rd: 3px;
+$p1padding: 12px 15px 12px 15px;
+$p1-Background: #8bc34a;
+$p1-border: 1px solid #8bc34a;
+$p1-hov-bg:#9dce5d;
+$p1-min-width: 110px;
+$p1-font-family: "SegoeUI SemiBold";
+$p1-font-size: 16px;
+$p1-color: #FFFFFF;
+$p1-bg-disable:#eeeeee;
+$p1-disbl-color: #999999;
+$s1-bg-color: #FFFFFF;
+$s1-color: #2095f2;
+$s1-hv-bg: #2095f2;
+$s2-bg-color: #ffffff;
+$s2-color: #999999;
+$s2-border : #cccccc;
+@mixin myButtonp1() {
+    border-radius: $p1-Border-rd;
+    padding: $p1padding;
+    background-color: $p1-Background;
+    border: $p1-border;
+    min-width: $p1-min-width;
+    font-family: $p1-font-family;
+    font-size: $p1-font-size;
+    color: $p1-color;
+    &:hover {
+        background-color: $p1-hov-bg;
+        color: $p1-color;
+        border: 1px solid $p1-hov-bg;
+    }
+}
+
+@mixin myButtonp2() {
+    background-color: $p1-bg-disable;
+    color: $p1-disbl-color;
+    border: 1px solid $p1-bg-disable;
+    padding: $p1padding;
+    min-width: $p1-min-width;
+    font-family: $p1-font-family;
+    font-size: $p1-font-size;
+}
+
+@mixin myButtons1() {
+    padding: $p1padding;
+    min-width: $p1-min-width;
+    font-family: $p1-font-family;
+    font-size: $p1-font-size;
+    background-color: $s1-bg-color;
+    color: $s1-color;
+    border: 1px solid $s1-color;
+    &:hover {
+        background-color: $s1-color;
+        color: $s1-bg-color;
+        border: 1px solid $s1-color;
+    }
+}
+
+@mixin myButtons2() {
+    background-color: $s2-bg-color;
+    color: $s2-color;
+    border: 1px solid $s2-border;
+    padding: $p1padding;
+    min-width: $p1-min-width;
+    font-family: $p1-font-family;
+    font-size: $p1-font-size;
+}
+
+.btn-myPrimary {
+    @include myButtonp1();
+}
+
+.btn-myPrimaryDisable {
+    @include myButtonp2();
+}
+
+.btn-mySecondary {
+    @include myButtons1();
+}
+
+.btn-mySecondaryDisable {
+    @include myButtons2();
+}
